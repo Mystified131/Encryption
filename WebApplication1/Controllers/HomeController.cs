@@ -59,9 +59,7 @@ namespace WebApplication1.Controllers
 
                     Encrypt mess = new Encrypt(resultViewModel.messin);
 
-                    string messone = mess.Messout(resultViewModel.messin);
-
-                    resultViewModel.messout = mess.Messout(messone);
+                    resultViewModel.messout = mess.Messout(resultViewModel.messin);
 
                     return View(resultViewModel);
 
@@ -95,9 +93,7 @@ namespace WebApplication1.Controllers
 
                 Encrypt mess = new Encrypt(result2ViewModel.decrypt);
 
-                string messone = mess.Decrypt(result2ViewModel.decrypt);
-
-                result2ViewModel.messout = mess.Decrypt(messone);
+                result2ViewModel.messout = mess.Decrypt(result2ViewModel.decrypt);
 
                 return View(result2ViewModel);
 
